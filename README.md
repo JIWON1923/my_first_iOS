@@ -31,3 +31,9 @@
 - Assets: 앱의 아이콘 설정
 - LaunchScreen: 스플래시 화면
 - Info: 앱이 실행될 때 필요한 정보를 가지고 있는 파일
+
+### 2. Hello World 출력하기
+- Auto Layout을 활용하였다.
+- command + shift + L (또는 우측 상단 + 버튼 클릭)
+- Lable 추가 (가운데 정렬 후 Alignment constraints 추가)
+<img width="520" alt="스크린샷 2021-12-06 오전 2 41 02" src="https://user-images.githubusercontent.com/68676844/144757353-ab92a4f0-f594-4198-8b12-9ca909148d06.png">
