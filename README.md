@@ -122,4 +122,4 @@ class DetailController : UIViewController{
 7) 결과
 
 
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif){: height="500"}
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif){: width="30%" height="50%"}
