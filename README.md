@@ -2,10 +2,10 @@
 ## Xcode
 ### 1. 새 프로젝트 만들기
 1) Xcode를 실행하고, Create a new Xcode project를 클릭한다.
-<img width="80%" alt="스크린샷 2021-12-06 오전 1 42 56" src="https://user-images.githubusercontent.com/68676844/144755493-b2fc9635-35a6-417d-a42d-3d13ac6a90ec.png">
+<img width="80%" src="https://user-images.githubusercontent.com/68676844/144755493-b2fc9635-35a6-417d-a42d-3d13ac6a90ec.png">
 
 2) App을 선택한다. 
-<img width="80%" alt="스크린샷 2021-12-06 오전 1 43 12" src="https://user-images.githubusercontent.com/68676844/144755504-6224efe2-e3a1-4ed2-b041-3fef02e0bdf0.png">
+<img width="80%"  src="https://user-images.githubusercontent.com/68676844/144755504-6224efe2-e3a1-4ed2-b041-3fef02e0bdf0.png">
 - APP: View를 사용하여 개발할 때 사용하는 템플릿으로, 일반적으로 가장 많이 사용한다. 
 - Document App: 데이터를 저장해야하는 문서 기반의 앱을 만들 때 사용한다. 
 - Game: 그래픽 처리를 위한 OpenGL이 포함되어 있다.
@@ -15,7 +15,7 @@
 
 
 3) project option 선택
-<img width="80%" alt="스크린샷 2021-12-06 오전 1 44 52" src="https://user-images.githubusercontent.com/68676844/144755507-0d736d98-219e-4aee-a099-20b1f99ac4c0.png">
+<img width="80%"  src="https://user-images.githubusercontent.com/68676844/144755507-0d736d98-219e-4aee-a099-20b1f99ac4c0.png">
 
 
 - Product Name: Project 이름으로 앱의 이름이 된다. 
@@ -25,7 +25,7 @@
 - Language: 개발하고자하는 언어를 선택한다. 
 
 4) 프로젝트 생성 완료
-<img width="80%" alt="스크린샷 2021-12-06 오전 1 45 12" src="https://user-images.githubusercontent.com/68676844/144755513-441314b1-6b14-4331-be96-60146814e857.png">
+<img width="80%" src="https://user-images.githubusercontent.com/68676844/144755513-441314b1-6b14-4331-be96-60146814e857.png">
 
 - AppDelegate: 앱의 Life Cycle 관련 내용
 - SceneDelegate: UI의 Life Cycle 관련 내용
@@ -39,7 +39,7 @@
 - Auto Layout을 활용하였다.
 - command + shift + L (또는 우측 상단 + 버튼 클릭)
 - Lable 추가 (가운데 정렬 후 Alignment constraints 추가)
-<img width="520" alt="스크린샷 2021-12-06 오전 2 41 02" src="https://user-images.githubusercontent.com/68676844/144757353-ab92a4f0-f594-4198-8b12-9ca909148d06.png">
+<img width="520" src="https://user-images.githubusercontent.com/68676844/144757353-ab92a4f0-f594-4198-8b12-9ca909148d06.png">
 
 ### 3. Button 구현하기
 - Lable과 같은 형태로 Button 추가
@@ -47,15 +47,15 @@
 - Button을 클릭할 때 마다 console에 click 출력
 
 결과화면
-<img width="520" alt="스크린샷 2021-12-07 오전 1 35 29" src="https://user-images.githubusercontent.com/68676844/144887294-f96214ac-cf54-4296-bad1-05c3ce07cf00.png">
+<img width="520" src="https://user-images.githubusercontent.com/68676844/144887294-f96214ac-cf54-4296-bad1-05c3ce07cf00.png">
 
-<img width="80%" alt="스크린샷 2021-12-07 오전 1 35 33" src="https://user-images.githubusercontent.com/68676844/144887279-122fb334-a5c3-49f5-ad85-97e055bf473b.png">
+<img width="80%"  src="https://user-images.githubusercontent.com/68676844/144887279-122fb334-a5c3-49f5-ad85-97e055bf473b.png">
 
 
 4. Navigation Bar
 
 0) Initial View Controller
-<img width="80%" alt="스크린샷 2021-12-08 오전 12 40 52" src="https://user-images.githubusercontent.com/68676844/145060266-371666c7-d4da-46b5-997e-05afed6c5fbb.png">
+<img width="80%" src="https://user-images.githubusercontent.com/68676844/145060266-371666c7-d4da-46b5-997e-05afed6c5fbb.png">
 
 - initial view 는 시작점이다.
 - is initial view controller에 체크표시가 있을 때 화살표가 활성화된다.
@@ -64,19 +64,19 @@
 
 
 1) Navigation Collector 만들기
-<img width="793" alt="스크린샷 2021-12-08 오전 12 47 14" src="https://user-images.githubusercontent.com/68676844/145061681-4cae1093-a5a6-46d9-8878-0db28f09f568.png">
+<img width="793"  src="https://user-images.githubusercontent.com/68676844/145061681-4cae1093-a5a6-46d9-8878-0db28f09f568.png">
 
-<img width="1440" alt="스크린샷 2021-12-08 오전 12 48 09" src="https://user-images.githubusercontent.com/68676844/145061689-453b0203-6438-4771-b95c-9472da92ff4b.png">
+<img width="1440"  src="https://user-images.githubusercontent.com/68676844/145061689-453b0203-6438-4771-b95c-9472da92ff4b.png">
 - 화살표는 Navigation controller가 root view를 관장함을 의미한다. 
 - Navigation은 화면이 아님에 주의한다.
 
 2) Navigation Collector를 initial view로 설정
 
-<img width="1440" alt="스크린샷 2021-12-08 오전 12 54 11" src="https://user-images.githubusercontent.com/68676844/145062139-6aef9bfb-edce-4dbc-8b68-eca3217cf372.png">
+<img width="1440" src="https://user-images.githubusercontent.com/68676844/145062139-6aef9bfb-edce-4dbc-8b68-eca3217cf372.png">
 
 3) Root View와 View Controller class 연결
 
-<img width="1440" alt="스크린샷 2021-12-08 오전 1 01 41" src="https://user-images.githubusercontent.com/68676844/145063532-8339c223-5f19-4adc-a75f-a67579e1c61b.png">
+<img width="1440" src="https://user-images.githubusercontent.com/68676844/145063532-8339c223-5f19-4adc-a75f-a67579e1c61b.png">
 
 4) 두 번째 view를 위한 class 생성 (DetailController.swift)
 
@@ -95,7 +95,7 @@ class DetailController : UIViewController{
 
 5) detail view에 위 클래스 연결 및 id 설정
 
-<img width="1440" alt="스크린샷 2021-12-08 오전 1 20 02" src="https://user-images.githubusercontent.com/68676844/145066611-834188da-f575-4ad0-8667-682358e44d4a.png">
+<img width="1440" src="https://user-images.githubusercontent.com/68676844/145066611-834188da-f575-4ad0-8667-682358e44d4a.png">
 
 
 6) detail view를 navigation에 추가
@@ -122,4 +122,4 @@ class DetailController : UIViewController{
 7) 결과
 
 
-![image](https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif){: width="30%" height="50%"}
+<img height="50%" src = "https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif">
