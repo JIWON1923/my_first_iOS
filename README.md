@@ -16,6 +16,8 @@
 
 3) project option 선택
 <img width="80%" alt="스크린샷 2021-12-06 오전 1 44 52" src="https://user-images.githubusercontent.com/68676844/144755507-0d736d98-219e-4aee-a099-20b1f99ac4c0.png">
+
+
 - Product Name: Project 이름으로 앱의 이름이 된다. 
 - Team: 앱스토어에 등록된 개발자명. 나는 당분간 학습용으로만 사용할 것이어서 따로 등록하지 않았다.
 - Organization Identifier: 조직 식별자로 보통 도매인 주소를 역순으로 입력한다. 앱스토어에 등록하기 위해서라면 반드시 적어주어야 한다. 
@@ -24,6 +26,7 @@
 
 4) 프로젝트 생성 완료
 <img width="80%" alt="스크린샷 2021-12-06 오전 1 45 12" src="https://user-images.githubusercontent.com/68676844/144755513-441314b1-6b14-4331-be96-60146814e857.png">
+
 - AppDelegate: 앱의 Life Cycle 관련 내용
 - SceneDelegate: UI의 Life Cycle 관련 내용
 - ViewController: 뷰에서 처리하는 내용을 작성한다. 하나의 뷰에 하나의 클래스로 대응된다.
@@ -47,3 +50,74 @@
 <img width="520" alt="스크린샷 2021-12-07 오전 1 35 29" src="https://user-images.githubusercontent.com/68676844/144887294-f96214ac-cf54-4296-bad1-05c3ce07cf00.png">
 
 <img width="80%" alt="스크린샷 2021-12-07 오전 1 35 33" src="https://user-images.githubusercontent.com/68676844/144887279-122fb334-a5c3-49f5-ad85-97e055bf473b.png">
+
+
+4. Navigation Bar
+
+0) Initial View Controller
+<img width="80%" alt="스크린샷 2021-12-08 오전 12 40 52" src="https://user-images.githubusercontent.com/68676844/145060266-371666c7-d4da-46b5-997e-05afed6c5fbb.png">
+
+- initial view 는 시작점이다.
+- is initial view controller에 체크표시가 있을 때 화살표가 활성화된다.
+- 즉, 시작점을 설정하고자 할 때 위 체크박스를 표시한다.
+- 또한, initial view를 찾고자 할 때 스토리보드에 화살표 표시가 되어 있는것이 initial view임을 알 수 있다.
+
+
+1) Navigation Collector 만들기
+<img width="793" alt="스크린샷 2021-12-08 오전 12 47 14" src="https://user-images.githubusercontent.com/68676844/145061681-4cae1093-a5a6-46d9-8878-0db28f09f568.png">
+
+<img width="1440" alt="스크린샷 2021-12-08 오전 12 48 09" src="https://user-images.githubusercontent.com/68676844/145061689-453b0203-6438-4771-b95c-9472da92ff4b.png">
+- 화살표는 Navigation controller가 root view를 관장함을 의미한다. 
+- Navigation은 화면이 아님에 주의한다.
+
+2) Navigation Collector를 initial view로 설정
+
+<img width="1440" alt="스크린샷 2021-12-08 오전 12 54 11" src="https://user-images.githubusercontent.com/68676844/145062139-6aef9bfb-edce-4dbc-8b68-eca3217cf372.png">
+
+3) Root View와 View Controller class 연결
+
+<img width="1440" alt="스크린샷 2021-12-08 오전 1 01 41" src="https://user-images.githubusercontent.com/68676844/145063532-8339c223-5f19-4adc-a75f-a67579e1c61b.png">
+
+4) 두 번째 view를 위한 class 생성 (DetailController.swift)
+
+
+``` swift
+import UIKit
+class DetailController : UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+}
+```
+
+
+5) detail view에 위 클래스 연결 및 id 설정
+
+<img width="1440" alt="스크린샷 2021-12-08 오전 1 20 02" src="https://user-images.githubusercontent.com/68676844/145066611-834188da-f575-4ad0-8667-682358e44d4a.png">
+
+
+6) detail view를 navigation에 추가
+- move 버튼의 클릭 이벤트 생성 후 코드 작성
+
+
+``` swift
+    @IBAction func Click_MoveBtn(_ sender: Any) {
+        
+        // 1단계 : 스토리보드에서 이동 할 컨트롤러 찾기 : id 이용, 옵셔널 바인딩
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "DetailController"){
+            
+            // 2단계: 찾은 컨트롤러를 네비게이션에 넣기
+            self.navigationController?.pushViewController(controller, animated: true)
+            
+        }
+    }
+```
+
+
+1단계 : 이동할 스토리보드 찾기
+2단계 : 해당 스토리보드를 네비게이션에 넣기
+
+7) 결과
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif)

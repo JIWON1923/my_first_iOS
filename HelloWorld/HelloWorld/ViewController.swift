@@ -14,9 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    // click event
-    @IBAction func Click_moveBtn(_ sender: Any) {
-        print("Click")
+    @IBAction func Click_MoveBtn(_ sender: Any) {
+        
+        // 1단계 : 스토리보드에서 이동 할 컨트롤러 찾기 : id 이용, 옵셔널 바인딩
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "DetailController"){
+            
+            // 2단계: 찾은 컨트롤러를 네비게이션에 넣기
+            self.navigationController?.pushViewController(controller, animated: true)
+            
+        }
     }
 }
 
