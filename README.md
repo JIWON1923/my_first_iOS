@@ -120,4 +120,6 @@ class DetailController : UIViewController{
 2단계 : 해당 스토리보드를 네비게이션에 넣기
 
 7) 결과
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif)
+
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif){: height="500"}
