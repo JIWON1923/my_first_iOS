@@ -122,4 +122,4 @@ class DetailController : UIViewController{
 7) 결과
 
 
-<img height="150" src = "https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif">
+<img height="500" src = "https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif">
