@@ -1,5 +1,5 @@
 # 첫 iOS 도전기
-## Xcode
+## Hello world
 ### 1. 새 프로젝트 만들기
 1) Xcode를 실행하고, Create a new Xcode project를 클릭한다.
 <img width="80%" src="https://user-images.githubusercontent.com/68676844/144755493-b2fc9635-35a6-417d-a42d-3d13ac6a90ec.png">
@@ -123,3 +123,73 @@ class DetailController : UIViewController{
 
 
 <img height="500" src = "https://user-images.githubusercontent.com/68676844/145070254-f9670b84-6621-4846-aff4-577eed1ddaeb.gif">
+
+
+## Web view
+
+### Google 웹 사이트 보여주는 뷰
+
+1) web view 추가
+<img width="80%" src="https://user-images.githubusercontent.com/68676844/145171826-33751361-fa9b-48b1-bec3-6b4b9597a8bc.png">
+
+<img width=80% src="https://user-images.githubusercontent.com/68676844/145171902-9033dd8e-c661-4395-90c9-0b2b816ff6da.png">
+- web view 영역을 전체 화면으로 선택했다.
+
+<img width="80%" src="https://user-images.githubusercontent.com/68676844/145172217-c9194588-c86b-4a0b-8b4d-057ff7b64b45.png">
+- 가운데 정렬 제약조건을 추가한다.
+
+2) web view와 클래스 연결
+<img width="80%" src="https://user-images.githubusercontent.com/68676844/145172318-872da630-9307-45d3-9f00-2aef37931a02.png">
+
+** Error 발생 **
+<img width="80%" alt="스크린샷 2021-12-08 오후 4 20 34" src="https://user-images.githubusercontent.com/68676844/145172447-2dbc10c2-369b-4042-b03b-cda539ca3550.png">
+
+
+- import WebKit을 추가하면 해결된다.
+
+
+``` swift
+import UIKit
+import WebKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var WebViewMain: WKWebView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+}
+```
+
+
+3) Web view 실행 방법
+ 1단계: url String 입력 -> URL로 형변환
+ 2단계 : URL Request로 변환
+ 3단계 : web view에 load
+ 
+ 
+``` swift
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let urlString = "https://www.google.com"
+        if let url = URL(string: urlString){ //unwrap
+            let urlRequest = URLRequest(url: url) // 2단계
+            WebViewMain.load(urlRequest)
+        }
+    }
+```
+
+** unwrap **
+
+
+``` swift
+    public init?(string: String)
+```
+
+
+- URL의 definition을 보면, 해당 값에 nil 값이 들어있을 수 있다는 것을 알 수 있다.
+- 이에 optional binding (unwrap)을 통해 nil 값이 아닐 때에만 처리할 수 있도록 선언한다.
+
+
+4) 결과
+<img height="500 alt="결과화면" src="https://user-images.githubusercontent.com/68676844/145171669-dfc287f2-6caf-4697-bf73-6c14630b4aaa.png">
