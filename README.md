@@ -142,7 +142,7 @@ class DetailController : UIViewController{
 <img width="80%" src="https://user-images.githubusercontent.com/68676844/145172318-872da630-9307-45d3-9f00-2aef37931a02.png">
 
 
-** Error 발생 **
+**Error 발생**
 
 
 <img width="80%" alt="스크린샷 2021-12-08 오후 4 20 34" src="https://user-images.githubusercontent.com/68676844/145172447-2dbc10c2-369b-4042-b03b-cda539ca3550.png">
@@ -183,7 +183,7 @@ class ViewController: UIViewController {
 ```
 
 
-** unwrap **
+**unwrap**
 
 
 
